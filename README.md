@@ -1,8 +1,35 @@
 # DesiccantProps
 
+[![CI: build, tests and formatting](https://github.com/NatLabRockies/DesiccantProps/actions/workflows/pypi.yml/badge.svg?branch=main)](https://github.com/NatLabRockies/DesiccantProps/actions/workflows/pypi.yml)
+[![PyPI](https://img.shields.io/pypi/v/desiccant-props)](https://pypi.org/project/desiccant-props/)
+[![crates.io](https://img.shields.io/crates/v/desiccant-props)](https://crates.io/crates/desiccant-props)
+
 Thermophysical properties of aqueous potassium acetate (KAc) and lithium
 chloride (LiCl) for HVAC simulation. The Python package wraps the same Rust
 implementation.
+
+## Installation
+
+For Rust, add the crate to your project:
+
+```sh
+cargo add desiccant-props
+```
+
+For Python 3.10 or later, install from PyPI once the package is published:
+
+```sh
+python -m pip install desiccant-props
+```
+
+Before the PyPI release, you can install from a local checkout with Rust
+installed:
+
+```sh
+python -m pip install .
+```
+
+## Usage
 
 ```rust
 use desiccant_props::Solution;
