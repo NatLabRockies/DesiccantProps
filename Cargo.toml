@@ -1,0 +1,25 @@
+[package]
+name = "desiccant-props"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Thermophysical properties of aqueous liquid desiccants for HVAC simulation"
+license = "BSD-3-Clause"
+repository = "https://github.com/NatLabRockies/DesiccantProps"
+documentation = "https://docs.rs/desiccant-props"
+readme = "README.md"
+keywords = ["hvac", "desiccant", "thermophysical"]
+include = ["/src/**", "/tests/**", "/python/desiccant_props/*.py", "/python/tests/*.py", "/LICENSE", "/README.md", "/pyproject.toml"]
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[features]
+python = ["dep:pyo3"]
+
+[dependencies]
+vle-steam = "0.20.1"
+pyo3 = { version = "0.28.3", optional = true, features = ["abi3-py310"] }
+
+[package.metadata.docs.rs]
+no-default-features = true
